@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -313,6 +317,7 @@
     opacity: 0; transition: opacity 0.3s;
   }
   .gallery-item:hover .gallery-label { opacity: 1; }
+  .gallery-grid a { display: block; }
 
   /*  LOCATION  */
   #location { background: var(--white); }
@@ -719,77 +724,131 @@
     <h2 class="section-title">Photo <em>Gallery</em></h2>
   </div>
   <div class="container-wide">
-    <div class="gallery-grid" style="margin-top:3rem;">
-      <div class="gallery-item tall">
-        <img src="images/gallery_1.jpeg" alt="Estate exterior">
-        <div class="gallery-label">The Estate · South Façade</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_2.jpeg" alt="Library">
-        <div class="gallery-label">Library</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_3.jpeg" alt="Salon">
-        <div class="gallery-label">Grand Salon</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_4.jpeg" alt="Pool">
-        <div class="gallery-label">Private Pool & Grounds</div>
-      </div>
-      <div class="gallery-item wide">
-        <img src="images/gallery_5.jpeg" alt="Dining">
-        <div class="gallery-label">Vaulted Dining Hall</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_6.jpeg" alt="Garites">
-        <div class="gallery-label">Garites and Fields</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_7.jpeg" alt="Views">
-        <div class="gallery-label">Views of the Pool</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_8.jpeg" alt="Evening">
-        <div class="gallery-label">Evening Lights</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_9.jpeg" alt="Library">
-        <div class="gallery-label">Views of the Pool</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_10.jpeg" alt="Dining 2">
-        <div class="gallery-label">Dining Room 2</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_11.jpeg" alt="Bathroom 1">
-        <div class="gallery-label">Bathroom 1</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_12.jpeg" alt="Bedroom 1">
-        <div class="gallery-label">Bedroom 1</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_13.jpeg" alt="Kitchen 1">
-        <div class="gallery-label">Kitchen 1</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_14.jpeg" alt="Bathroom 2">
-        <div class="gallery-label">Bathroom 2</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_15.jpeg" alt="Estate 1">
-        <div class="gallery-label">Estate 1</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_16.jpeg" alt="Bedroom 2">
-        <div class="gallery-label">Bedroom 2</div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/gallery_17.jpeg" alt="Bedroom 3">
-        <div class="gallery-label">Bedroom 3</div>
-      </div>
 
+
+    <div class="gallery-grid" style="margin-top:3rem;">
+    
+      <a href="images/gallery_1.jpeg" data-lightbox="gallery" data-title="The Estate · South Façade">
+        <div class="gallery-item tall">
+          <img src="images/gallery_1.jpeg" alt="Estate exterior">
+          <div class="gallery-label">The Estate · South Façade</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_2.jpeg" data-lightbox="gallery" data-title="Library">
+        <div class="gallery-item">
+          <img src="images/gallery_2.jpeg" alt="Library">
+          <div class="gallery-label">Library</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_3.jpeg" data-lightbox="gallery" data-title="Grand Salon">
+        <div class="gallery-item">
+          <img src="images/gallery_3.jpeg" alt="Salon">
+          <div class="gallery-label">Grand Salon</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_4.jpeg" data-lightbox="gallery" data-title="Private Pool & Grounds">
+        <div class="gallery-item">
+          <img src="images/gallery_4.jpeg" alt="Pool">
+          <div class="gallery-label">Private Pool & Grounds</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_5.jpeg" data-lightbox="gallery" data-title="Vaulted Dining Hall">
+        <div class="gallery-item wide">
+          <img src="images/gallery_5.jpeg" alt="Dining">
+          <div class="gallery-label">Vaulted Dining Hall</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_6.jpeg" data-lightbox="gallery" data-title="Garites and Fields">
+        <div class="gallery-item">
+          <img src="images/gallery_6.jpeg" alt="Garites">
+          <div class="gallery-label">Garites and Fields</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_7.jpeg" data-lightbox="gallery" data-title="Views of the Pool">
+        <div class="gallery-item">
+          <img src="images/gallery_7.jpeg" alt="Views">
+          <div class="gallery-label">Views of the Pool</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_8.jpeg" data-lightbox="gallery" data-title="Evening Lights">
+        <div class="gallery-item">
+          <img src="images/gallery_8.jpeg" alt="Evening">
+          <div class="gallery-label">Evening Lights</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_9.jpeg" data-lightbox="gallery" data-title="Views of the Pool">
+        <div class="gallery-item">
+          <img src="images/gallery_9.jpeg" alt="Library">
+          <div class="gallery-label">Views of the Pool</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_10.jpeg" data-lightbox="gallery" data-title="Dining Room 2">
+        <div class="gallery-item">
+          <img src="images/gallery_10.jpeg" alt="Dining 2">
+          <div class="gallery-label">Dining Room 2</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_11.jpeg" data-lightbox="gallery" data-title="Bathroom 1">
+        <div class="gallery-item">
+          <img src="images/gallery_11.jpeg" alt="Bathroom 1">
+          <div class="gallery-label">Bathroom 1</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_12.jpeg" data-lightbox="gallery" data-title="Bedroom 1">
+        <div class="gallery-item">
+          <img src="images/gallery_12.jpeg" alt="Bedroom 1">
+          <div class="gallery-label">Bedroom 1</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_13.jpeg" data-lightbox="gallery" data-title="Kitchen 1">
+        <div class="gallery-item">
+          <img src="images/gallery_13.jpeg" alt="Kitchen 1">
+          <div class="gallery-label">Kitchen 1</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_14.jpeg" data-lightbox="gallery" data-title="Bathroom 2">
+        <div class="gallery-item">
+          <img src="images/gallery_14.jpeg" alt="Bathroom 2">
+          <div class="gallery-label">Bathroom 2</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_15.jpeg" data-lightbox="gallery" data-title="Estate 1">
+        <div class="gallery-item">
+          <img src="images/gallery_15.jpeg" alt="Estate 1">
+          <div class="gallery-label">Estate 1</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_16.jpeg" data-lightbox="gallery" data-title="Bedroom 2">
+        <div class="gallery-item">
+          <img src="images/gallery_16.jpeg" alt="Bedroom 2">
+          <div class="gallery-label">Bedroom 2</div>
+        </div>
+      </a>
+    
+      <a href="images/gallery_17.jpeg" data-lightbox="gallery" data-title="Bedroom 3">
+        <div class="gallery-item">
+          <img src="images/gallery_17.jpeg" alt="Bedroom 3">
+          <div class="gallery-label">Bedroom 3</div>
+        </div>
+      </a>
+      
     </div>
+
   </div>
 </section>
 
