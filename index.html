@@ -64,7 +64,7 @@
     transition: color 0.4s;
   }
   nav.scrolled .nav-logo { color: var(--ink); }
-  /* .nav-links { display: flex; gap: 2.5rem; list-style: none; }  new code replaced*/
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }  
   .nav-links a {
     font-family: 'EB Garamond', serif; font-size: 0.9rem;
     letter-spacing: 0.12em; color: rgba(255,255,255,0.85);
@@ -73,31 +73,7 @@
   }
   nav.scrolled .nav-links a { color: var(--ink-soft); }
   .nav-links a:hover { color: var(--gold-light) !important; }
-
-  /* -- new code */
-/* Update the existing .nav-links rule */
-.nav-links { 
-  display: flex; 
-  gap: 2.5rem; 
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
-/* Show on hover - create a hover zone */
-nav:hover .nav-links {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Keep visible when at top of page */
-nav:not(.scrolled) .nav-links {
-  opacity: 1;
-  visibility: visible;
-}
-  /* --- end of new */
-  
+   
   .nav-cta {
     font-family: 'Cinzel', serif; font-size: 0.75rem;
     letter-spacing: 0.2em; text-transform: uppercase;
