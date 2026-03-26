@@ -268,10 +268,21 @@
   }
   .exp-pdf-link {
     display: inline-block;
-    margin-top: 12px;
-    font-size: 0.85rem;
-    color: your-accent-color;
-    text-decoration: underline;
+    margin-top: 1.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  .exp-pdf-link:hover {
+    color: var(--stone-dark);
+    border-color: var(--stone-dark);
   }
 
   /*  AMENITIES  */
