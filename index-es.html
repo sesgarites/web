@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ses Garites | Alquiler Exclusivo de Masía del Siglo XVI | Pals, Costa Brava</title>
+<meta name="title" content="Ses Garites | Alquiler Exclusivo de Masía del Siglo XVI | Pals, Costa Brava">
+<meta name="description" content="Vive el alma del Baix Empordà en Ses Garites. Una masía fortificada del siglo XVI meticulosamente restaurada en Pals, con piscina privada y el encanto histórico en el corazón de la Costa Brava.">
+<meta name="keywords" content="Ses Garites Pals, masía siglo XVI Costa Brava, alquiler casa lujo Pals, villa histórica alquiler España, masía fortificada Pals, finca de lujo Baix Empordà, casa vacacional patrimonio España, retiro privado de lujo Pals">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ses Garites | Patrimonio de Lujo del Siglo XVI en Pals">
+<meta property="og:description" content="Escápate a una masía fortificada histórica. Lujo privado en el corazón medieval de la Costa Brava.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --stone: #c8b89a;
+    --stone-light: #e8ddd0;
+    --stone-dark: #8a7560;
+    --parchment: #f5f0e8;
+    --parchment-deep: #ede4d4;
+    --ink: #2a2118;
+    --ink-soft: #4a3f32;
+    --gold: #b8965a;
+    --gold-light: #d4b278;
+    --sea: #3a6b7a;
+    --sea-light: #5a8fa0;
+    --cream: #faf7f2;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* LANGUAGE TOGGLE */
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.35);
+    overflow: hidden;
+    transition: border-color 0.4s;
+  }
+  nav.scrolled .lang-toggle {
+    border-color: rgba(200,184,154,0.5);
+  }
+  .lang-toggle a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    transition: background 0.3s, color 0.3s;
+    color: rgba(255,255,255,0.6);
+    background: transparent;
+  }
+  nav.scrolled .lang-toggle a {
+    color: var(--stone-dark);
+  }
+  .lang-toggle a.active {
+    background: var(--gold);
+    color: var(--white) !important;
+  }
+  .lang-toggle a:not(.active):hover {
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.95);
+  }
+  nav.scrolled .lang-toggle a:not(.active):hover {
+    background: rgba(184,150,90,0.1);
+    color: var(--ink);
+  }
+
+  /*  NAV  */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.6rem 3rem;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background 0.4s, border-color 0.4s, padding 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(250,247,242,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(200,184,154,0.3);
+    padding: 1rem 3rem;
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem; letter-spacing: 0.25em;
+    color: rgba(255,255,255,0.95); text-decoration: none;
+    transition: color 0.4s;
+  }
+  nav.scrolled .nav-logo { color: var(--ink); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'EB Garamond', serif; font-size: 0.9rem;
+    letter-spacing: 0.12em; color: rgba(255,255,255,0.85);
+    text-decoration: none; text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  nav.scrolled .nav-links a { color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--gold-light) !important; }
+  .nav-cta {
+    font-family: 'Cinzel', serif; font-size: 0.75rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink); background: rgba(255,255,255,0.9);
+    padding: 0.6rem 1.5rem; text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  nav.scrolled .nav-cta { color: var(--white); background: var(--ink); }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--white) !important; }
+
+  /*  HERO  */
+  #hero {
+    height: 100vh; position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden; background: var(--ink);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(160deg, rgba(42,33,24,0.45) 0%, rgba(42,33,24,0.15) 50%, rgba(42,33,24,0.65) 100%),
+      url('images/img_0.jpeg') center/cover no-repeat;
+    transform: scale(1.05);
+    animation: heroZoom 18s ease-in-out infinite alternate;
+  }
+  @keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1.0); } }
+  .hero-content {
+    position: relative; text-align: center; color: var(--white);
+    padding: 0 2rem; animation: fadeUp 1.4s ease both;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif; font-size: 0.72rem;
+    letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: 1.5rem;
+    opacity: 0; animation: fadeUp 1s 0.3s ease both;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 10vw, 9rem);
+    font-weight: 300; line-height: 0.9; letter-spacing: -0.01em;
+    opacity: 0; animation: fadeUp 1s 0.5s ease both;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-family: 'EB Garamond', serif; font-size: 1.6rem;
+    font-weight: 400; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.95); margin-top: 1.5rem;
+    opacity: 0; animation: fadeUp 1s 0.7s ease both;
+  }
+  .hero-divider {
+    width: 60px; height: 1px; background: var(--gold-light);
+    margin: 2rem auto; opacity: 0; animation: fadeUp 1s 0.9s ease both;
+  }
+  .hero-stats {
+    display: flex; gap: 3rem; justify-content: center;
+    opacity: 0; animation: fadeUp 1s 1.1s ease both;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 2.2rem;
+    font-weight: 300; color: var(--gold-light); display: block;
+  }
+  .hero-stat-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(255,255,255,0.90); margin-top: 0.3rem; display: block;
+  }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.90); font-family: 'Cinzel', serif;
+    font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
+    display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  .hero-scroll::after {
+    content: ''; width: 1px; height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9), transparent);
+  }
+  @keyframes pulse { 0%,100%{opacity:0.4} 50%{opacity:0.9} }
+
+  /*  SECTIONS  */
+  section { padding: 7rem 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
+  .container-wide { max-width: 1300px; margin: 0 auto; padding: 0 2.5rem; }
+  .section-eyebrow {
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold); display: block; margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300; line-height: 1.1; color: var(--ink);
+  }
+  .section-title em { font-style: italic; color: var(--stone-dark); }
+  .section-body {
+    font-size: 1.15rem; line-height: 1.85;
+    color: var(--ink-soft); max-width: 620px; margin-top: 1.5rem;
+  }
+
+  /*  ABOUT  */
+  #about { background: var(--white); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+  .about-image-stack { position: relative; height: 560px; }
+  .about-img-main {
+    position: absolute; top: 0; left: 0; width: 78%; height: 85%;
+    background: url('images/img_1.jpeg') center/cover;
+    box-shadow: 20px 20px 60px rgba(42,33,24,0.15);
+  }
+  .about-img-accent {
+    position: absolute; bottom: 0; right: 0; width: 52%; height: 52%;
+    background: url('images/img_2.jpeg') center/cover;
+    border: 6px solid var(--white);
+    box-shadow: 10px 10px 40px rgba(42,33,24,0.12);
+  }
+  .about-tag {
+    position: absolute; top: 50%; left: -2rem; transform: translateY(-50%);
+    background: var(--ink); color: var(--gold-light);
+    font-family: 'Cinzel', serif; font-size: 0.65rem;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    writing-mode: vertical-rl; text-orientation: mixed;
+  }
+  .stats-row { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 3rem; }
+  .stat-card { border-left: 2px solid var(--gold); padding: 1rem 1.5rem; background: var(--parchment); }
+  .stat-card-num {
+    font-family: 'Cormorant Garamond', serif; font-size: 2.4rem;
+    font-weight: 300; color: var(--gold); display: block;
+  }
+  .stat-card-label {
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--stone-dark); margin-top: 0.2rem; display: block;
+  }
+
+  /*  EXPERIENCES  */
+  #experiences { background: var(--parchment); }
+  .exp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 4rem; }
+  .exp-card {
+    background: var(--stone-light); padding: 2.5rem;
+    position: relative; overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+  }
+  .exp-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--stone));
+    transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+  }
+  .exp-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(42,33,24,0.1); }
+  .exp-card:hover::before { transform: scaleX(1); }
+  .exp-icon { font-size: 2rem; margin-bottom: 1.2rem; display: block; }
+  .exp-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.7rem;
+    font-weight: 400; color: var(--ink); margin-bottom: 0.8rem;
+  }
+  .exp-body { font-size: 1rem; line-height: 1.8; color: var(--ink-soft); }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .exp-tag {
+    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    border: 1px solid var(--stone); color: var(--stone-dark);
+    padding: 0.3rem 0.8rem;
+  }
+  .exp-pdf-link {
+    display: inline-block; margin-top: 1.8rem;
+    font-family: 'Cinzel', serif; font-size: 0.58rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--parchment); text-decoration: none;
+    background: var(--gold); border: 1px solid var(--gold);
+    padding: 0.6rem 1.4rem;
+    transition: background 0.3s, color 0.3s, letter-spacing 0.3s;
+  }
+  .exp-pdf-link:hover {
+    background: var(--stone-dark); border-color: var(--stone-dark); letter-spacing: 0.28em;
+  }
+
+  /*  AMENITIES  */
+  #amenities { background: var(--ink); color: var(--white); }
+  #amenities .section-title { color: var(--white); }
+  #amenities .section-title em { color: var(--gold-light); }
+  #amenities .section-eyebrow { color: var(--gold); }
+  #amenities .section-body { color: rgba(255,255,255,0.65); }
+  .amenities-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 4rem; background: rgba(200,184,154,0.15); }
+  .amenity-item {
+    padding: 2.5rem; background: rgba(42,33,24,0.6);
+    display: flex; gap: 1.2rem; align-items: flex-start; transition: background 0.3s;
+  }
+  .amenity-item:hover { background: rgba(184,150,90,0.12); }
+  .amenity-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.2rem; }
+  .amenity-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--white); margin-bottom: 0.3rem; }
+  .amenity-desc { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+  /*  GALLERY  */
+  #gallery { background: var(--parchment); }
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px 300px; gap: 8px; margin-top: 3rem;
+  }
+  .gallery-item { overflow: visible; position: relative; background: var(--stone-light); transition: z-index 0.3s; }
+  .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .gallery-item:hover { z-index: 10; }
+  .gallery-item:hover img { transform: scale(1.5); }
+  .gallery-item.tall { grid-row: span 2; }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-label {
+    position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem 1.2rem;
+    background: linear-gradient(to top, rgba(42,33,24,0.8), transparent);
+    font-family: 'EB Garamond', serif; font-style: italic;
+    color: rgba(255,255,255,0.85); font-size: 0.9rem;
+    opacity: 1; transition: opacity 0.3s;
+  }
+  .gallery-item:hover .gallery-label { opacity: 0; }
+
+  /*  LOCATION  */
+  #location { background: var(--white); }
+  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start; margin-top: 1rem; }
+  .location-items { display: flex; flex-direction: column; gap: .6rem; }
+  .location-item {
+    display: flex; gap: .2rem; align-items: flex-start;
+    padding: .2rem; border-left: 2px solid var(--stone-light);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .location-item:hover { border-color: var(--gold); background: var(--parchment); }
+  .location-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .location-name { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--sea); font-weight: 500; margin-bottom: 0.3rem; }
+  .location-desc { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; }
+  .map-placeholder { background: var(--parchment-deep); height: 420px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .map-placeholder iframe { width: 100%; height: 100%; border: none; }
+
+  /*  PRICING  */
+  #pricing { background: linear-gradient(135deg, var(--ink) 0%, #1a1410 100%); color: var(--white); }
+  #pricing .section-title { color: var(--white); }
+  #pricing .section-title em { color: var(--gold-light); }
+  #pricing .section-eyebrow { color: var(--gold); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3.5rem; }
+  .price-card { border: 1px solid rgba(200,184,154,0.2); padding: 2.5rem; position: relative; transition: border-color 0.3s, transform 0.3s; }
+  .price-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+  .price-card.featured { border-color: var(--gold); background: rgba(184,150,90,0.08); }
+  .price-badge {
+    position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--ink);
+    font-family: 'Cinzel', serif; font-size: 0.6rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 0.3rem 1rem; white-space: nowrap;
+  }
+  .price-season { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .price-months { font-size: 0.9rem; color: rgba(255,255,255,0.45); margin-bottom: 2rem; }
+  .price-amount { font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; color: var(--white); line-height: 1; }
+  .price-amount sup { font-size: 1.5rem; vertical-align: top; margin-top: 0.8rem; color: var(--gold-light); }
+  .price-unit { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 0.3rem; margin-bottom: 2rem; }
+  .price-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+  .price-features li { font-size: 0.95rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 0.6rem; }
+  .price-features li::before { content: ''; color: var(--gold); font-size: 0.5rem; flex-shrink: 0; }
+  .pricing-extras { margin-top: 4rem; }
+  .extras-title { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--white); margin-bottom: 2rem; }
+  .extras-title em { font-style: italic; color: var(--gold-light); }
+  .extras-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+  .extra-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(200,184,154,0.15); padding: 2rem; }
+  .extra-name { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+  .extra-desc { font-size: 0.95rem; color: rgba(255,255,255,0.5); line-height: 1.7; }
+  .extra-price { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); margin-top: 1rem; }
+
+  /*  POLICIES  */
+  .policies-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; margin-top: 3rem; }
+  .policy-item { text-align: center; }
+  .policy-icon { font-size: 1.8rem; display: block; margin-bottom: 0.8rem; }
+  .policy-label { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; display: block; }
+  .policy-value { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+  /*  ENQUIRY  */
+  #enquiry { background: var(--parchment); }
+  .enquiry-side-title { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; line-height: 1.15; color: var(--ink); margin-bottom: 1.5rem; }
+  .enquiry-side-title em { font-style: italic; color: var(--stone-dark); }
+  .enquiry-side-body { font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); }
+  .enquiry-contact { margin-top: 2.5rem; }
+  .enquiry-contact-label { font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; display: block; }
+  .enquiry-contact-value { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--ink); }
+
+  /*  FOOTER  */
+  footer { background: var(--ink); color: rgba(255,255,255,0.4); padding: 3rem 0; text-align: center; }
+  .footer-logo { font-family: 'Cinzel', serif; font-size: 1.2rem; letter-spacing: 0.35em; color: var(--gold-light); display: block; margin-bottom: 0.8rem; }
+  .footer-loc { font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.25); }
+
+  /*  ORNAMENT  */
+  .ornament { text-align: center; margin: 3rem 0; color: var(--gold); font-size: 0.8rem; letter-spacing: 1rem; }
+
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .about-grid, .location-grid { grid-template-columns: 1fr; }
+    .about-image-stack { height: 320px; }
+    .exp-grid, .amenities-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .gallery-item.tall, .gallery-item.wide { grid-row: auto; grid-column: auto; }
+    .extras-grid, .policies-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">Ses Garites</a>
+  <ul class="nav-links">
+    <li><a href="#about">La Propiedad</a></li>
+    <li><a href="#experiences">Experiencias</a></li>
+    <li><a href="#amenities">Comodidades</a></li>
+    <li><a href="#pricing">Precios</a></li>
+    <li><a href="#location">Ubicación</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <a href="index.html">EN</a>
+    <a href="index-es.html" class="active">ES</a>
+  </div>
+  <a href="#enquiry" class="nav-cta">Reservar Ahora</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Pals · Costa Brava · Cataluña</p>
+    <h1 class="hero-title">Ses <em>Garites</em></h1>
+    <p class="hero-sub">Adéntrate en Otro Siglo</p>
+    <div class="hero-divider"></div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">XVI</span>
+        <span class="hero-stat-label">Siglo de Construcción</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">6</span>
+        <span class="hero-stat-label">Habitaciones</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">20</span>
+        <span class="hero-stat-label">Huéspedes Máx.</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">10 Minutos</span>
+        <span class="hero-stat-label">A la Playa</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Descubrir</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-stack">
+        <div class="about-img-main"></div>
+        <div class="about-img-accent"></div>
+        <div class="about-tag">Est. Siglo XVI</div>
+      </div>
+      <div>
+        <span class="section-eyebrow">La Propiedad</span>
+        <h2 class="section-title">Un Tesoro Catalán,<br><em>Exclusivamente Tuyo</em></h2>
+        <p class="section-body">
+          Ses Garites es una de las fincas históricas más extraordinarias de la Costa Brava — una masía catalana del siglo XVI situada en el pueblo medieval de Pals, a pocos pasos del Mediterráneo. Con techos originales de bóveda de piedra, vigas de madera y suelos de terracota que llevan más de 500 años en pie, la finca ofrece un escenario incomparable para bodas, retiros privados y celebraciones exclusivas.
+        </p>
+        <p class="section-body" style="margin-top:1rem;">
+          La finca entera está disponible solo como conjunto — nunca compartida, nunca dividida. Tu evento, tu hogar, tu historia.
+        </p>
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="stat-card-num">6</span>
+            <span class="stat-card-label">Habitaciones y Baños</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-num">20</span>
+            <span class="stat-card-label">Huéspedes Máximo</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-num">500+</span>
+            <span class="stat-card-label">Años de Historia</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card-num">10 Minutos</span>
+            <span class="stat-card-label">De la Playa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experiences">
+  <div class="container">
+    <span class="section-eyebrow">Experiencias Exclusivas</span>
+    <h2 class="section-title">La Finca es Tuya<br><em>para Cada Ocasión</em></h2>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <span class="exp-icon"></span>
+        <h3 class="exp-title">Bodas</h3>
+        <p class="exp-body">Pronuncia tus votos bajo bóvedas de piedra de 500 años. Cena a la luz de las velas en el salón comedor medieval. Baila en el gran salón. Ses Garites ofrece un escenario inolvidable para una boda que tus invitados atesorarán para siempre.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">Espacio para Ceremonia</span>
+          <span class="exp-tag">Comedor Abovedado</span>
+          <span class="exp-tag">Terraza Jardín</span>
+          <span class="exp-tag">Hasta 20 Personas</span>
+        </div>
+        <a href="WeddingVenue.pdf" target="_blank" class="exp-pdf-link">Descargar Dossier de Bodas</a>
+      </div>
+      <div class="exp-card">
+        <span class="exp-icon"></span>
+        <h3 class="exp-title">Retiros</h3>
+        <p class="exp-body">Desconéctate del mundo en una de las fincas históricas más recónditas de Cataluña. Yoga en el jardín, meditación en la sala biblioteca, tardes junto a la chimenea. Espacio, silencio y belleza en abundancia.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">Piscina y Jardines</span>
+          <span class="exp-tag">Sala Biblioteca</span>
+          <span class="exp-tag">Vistas al Campo</span>
+          <span class="exp-tag">Privacidad Total</span>
+        </div>
+      </div>
+      <div class="exp-card">
+        <span class="exp-icon"></span>
+        <h3 class="exp-title">Celebraciones</h3>
+        <p class="exp-body">Cumpleaños señalados, aniversarios, reuniones familiares, retiros corporativos — Ses Garites es el raro espacio que hace que cada evento se sienta verdaderamente excepcional. Alquila toda la finca y hazla completamente tuya.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">Exclusividad Total</span>
+          <span class="exp-tag">Coordinación de Eventos</span>
+          <span class="exp-tag">Catering Disponible</span>
+          <span class="exp-tag">Chef Privado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amenities">
+  <div class="container-wide">
+    <div class="container" style="padding:0;">
+      <span class="section-eyebrow">Dentro de la Casa</span>
+      <h2 class="section-title">Espacios y <em>Comodidades</em></h2>
+      <p class="section-body">Seis habitaciones bellamente equipadas, cada una con baño privado y carácter único — desde bóvedas de piedra en bruto hasta techos pintados con ornamentos.</p>
+    </div>
+    <div class="amenities-grid" style="margin-top:3.5rem;">
+      <div class="amenity-item">
+        <span class="amenity-icon"></span>
+        <div>
+          <div class="amenity-name">5 Habitaciones Dobles</div>
+          <div class="amenity-desc">Cada una con baño privado · Techos únicos de bóveda de piedra o ladrillo · Capacidad 10 personas</div>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <span class="amenity-icon"></span>
+        <div>
+          <div class="amenity-name">Suite</div>
+          <div class="amenity-desc">3 habitaciones + 1 baño · Salón privado · Hasta 6 huéspedes · Acceso al jardín</div>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <span class="amenity-icon"></span>
+        <div>
+          <div class="amenity-name">Comedor Abovedado</div>
+          <div class="amenity-desc">Bóveda de piedra medieval · Cenas íntimas a la luz de las velas</div>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <span class="amenity-icon"></span>
+        <div>
+          <div class="amenity-name">Sala Biblioteca</div>
+          <div class="amenity-desc">Bóveda de piedra · Libros · Espacio íntimo de reunión</div>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <span class="amenity-icon"></span>
+        <div>
+          <div class="amenity-name">Piscina Privada</div>
+          <div class="amenity-desc">Piscina exterior · Terraza con tumbonas · Vistas a los prados · Zona de baño</div>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <span class="amenity-icon"></span>
+        <div>
+          <div class="amenity-name">Amplio Jardín</div>
+          <div class="amenity-desc">Jardines privados · Comedor en terraza · Paisaje rural catalán · Aparcamiento</div>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <span class="amenity-icon">‍</span>
+        <div>
+          <div class="amenity-name">Chef Privado</div>
+          <div class="amenity-desc">Disponible bajo petición · Cocina catalana local · Productos frescos de mercado</div>
+        </div>
+      </div>
+      <div class="amenity-item">
+        <span class="amenity-icon"></span>
+        <div>
+          <div class="amenity-name">Comodidades Modernas</div>
+          <div class="amenity-desc">WiFi de alta velocidad · Ventiladores de techo · Calefacción · Aparcamiento privado</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <span class="section-eyebrow">La Finca en Imágenes</span>
+    <h2 class="section-title">Galería de <em>Fotos</em></h2>
+  </div>
+  <div class="container-wide">
+    <div class="gallery-grid" style="margin-top:3rem;">
+       <div class="gallery-item tall">
+          <img src="images/gallery_1.jpeg" alt="Exterior de la finca">
+          <div class="gallery-label">La Finca · Fachada Sur</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_2.jpeg" alt="Biblioteca">
+          <div class="gallery-label">Biblioteca</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_3.jpeg" alt="Salón">
+          <div class="gallery-label">Gran Salón</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_4.jpeg" alt="Piscina">
+          <div class="gallery-label">Piscina Privada y Jardines</div>
+       </div>
+       <div class="gallery-item wide">
+          <img src="images/gallery_5.jpeg" alt="Comedor">
+          <div class="gallery-label">Comedor Abovedado</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_6.jpeg" alt="Garites">
+          <div class="gallery-label">Garites y Campos</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_7.jpeg" alt="Vistas">
+          <div class="gallery-label">Vistas a la Piscina</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_8.jpeg" alt="Noche">
+          <div class="gallery-label">Luces Nocturnas</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_9.jpeg" alt="Biblioteca">
+          <div class="gallery-label">Vistas a la Piscina</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_10.jpeg" alt="Comedor 2">
+          <div class="gallery-label">Comedor 2</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_11.jpeg" alt="Baño 1">
+          <div class="gallery-label">Baño 1</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_12.jpeg" alt="Habitación 1">
+          <div class="gallery-label">Habitación 1</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_13.jpeg" alt="Cocina 1">
+          <div class="gallery-label">Cocina 1</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_14.jpeg" alt="Baño 2">
+          <div class="gallery-label">Baño 2</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_15.jpeg" alt="Finca 1">
+          <div class="gallery-label">Finca 1</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_16.jpeg" alt="Habitación 2">
+          <div class="gallery-label">Habitación 2</div>
+       </div>
+       <div class="gallery-item">
+          <img src="images/gallery_17.jpeg" alt="Habitación 3">
+          <div class="gallery-label">Habitación 3</div>
+       </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="container">
+    <span class="section-eyebrow">Dónde Estamos</span>
+    <h2 class="section-title">Pals, <em>Costa Brava</em></h2>
+    <p class="section-body">Ses Garites se encuentra dentro de las murallas medievales de Pals, uno de los pueblos mejor conservados de Cataluña — rodeado de bosques de pinos, prados abiertos y a minutos de la costa mediterránea.</p>
+    <div class="location-grid">
+      <div class="location-items">
+        <div class="location-item">
+          <span class="location-icon"></span>
+          <div>
+            <div class="location-name">Platja de Pals</div>
+            <div class="location-desc">~5 min en coche · Arena fina · Aguas mediterráneas tranquilas · Windsurf y deportes acuáticos</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-icon"></span>
+          <div>
+            <div class="location-name">Pueblo Medieval de Pals</div>
+            <div class="location-desc">A pie · Restaurantes · Tiendas de artesanía · Arquitectura gótica</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-icon"></span>
+          <div>
+            <div class="location-name">Llafranc, Calella, Sa Tuna, Tamariu, Aiguablava</div>
+            <div class="location-desc">~20 min en coche · Calas turquesas escondidas · Pintorescos pueblos pesqueros · Excelente marisco</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-icon"></span>
+          <div>
+            <div class="location-name">Cadaqués</div>
+            <div class="location-desc">~1h en coche · Icónico pueblo pesquero encalado · Antigua casa de Dalí · Parque natural Cap de Creus</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-icon"></span>
+          <div>
+            <div class="location-name">Girona</div>
+            <div class="location-desc">~35 min en coche · Casco medieval · Restaurantes con estrella Michelin · Barrio Judío y catedral</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-icon"></span>
+          <div>
+            <div class="location-name">Barcelona</div>
+            <div class="location-desc">~1h 30 min en coche · Arquitectura de Gaudí · Gastronomía y vida nocturna · Aeropuerto internacional</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-icon">️</span>
+          <div>
+            <div class="location-name">Cómo Llegar</div>
+            <div class="location-desc">Aeropuerto de Girona ~35 min · Barcelona El Prat ~1h 30 min · Excelentes conexiones por carretera</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-placeholder">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11878.80!2d3.143!3d41.964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bae01b5a8e3a5d%3A0x7b3a96e13f1e2f00!2sPals%2C+Girona!5e0!3m2!1ses!2ses!4v1"
+          allowfullscreen loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <span class="section-eyebrow">Inversión</span>
+    <h2 class="section-title">Precios y <em>Paquetes</em></h2>
+    <p class="section-body" style="color:rgba(255,255,255,0.6);">Ses Garites está disponible solo para alquiler exclusivo — la finca entera, nunca por habitaciones. Todos los precios son por noche para toda la finca.</p>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-season">Temporada Baja</div>
+        <div class="price-months">Octubre – Marzo</div>
+        <div class="price-amount"><sup>€</sup>900</div>
+        <div class="price-unit">por noche · finca completa</div>
+        <ul class="price-features">
+          <li>Mínimo 3 noches</li>
+          <li>Las 6 habitaciones y baños</li>
+          <li>Uso exclusivo de la finca</li>
+          <li>Vino de bienvenida y productos locales</li>
+          <li>WiFi y aparcamiento privado</li>
+        </ul>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Más Popular</div>
+        <div class="price-season">Temporada Media</div>
+        <div class="price-months">Abril – Junio · Septiembre</div>
+        <div class="price-amount"><sup>€</sup>1.000</div>
+        <div class="price-unit">por noche · finca completa</div>
+        <ul class="price-features">
+          <li>Mínimo 3 noches</li>
+          <li>Las 6 habitaciones y baños</li>
+          <li>Uso exclusivo de la finca</li>
+          <li>Vino de bienvenida y productos locales</li>
+          <li>WiFi y aparcamiento privado</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-season">Temporada Alta</div>
+        <div class="price-months">Julio – Agosto</div>
+        <div class="price-amount"><sup>€</sup>1.200</div>
+        <div class="price-unit">por noche · finca completa</div>
+        <ul class="price-features">
+          <li>Mínimo 7 noches</li>
+          <li>Las 6 habitaciones y baños</li>
+          <li>Uso exclusivo de la finca</li>
+          <li>Vino de bienvenida y productos locales</li>
+          <li>WiFi y aparcamiento privado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pricing-extras" style="margin-top:4rem;">
+      <h3 class="extras-title">Paquetes <em>Especiales</em></h3>
+      <div class="extras-grid">
+        <div class="extra-card">
+          <div class="extra-name"> Paquete Boda (temp. media/baja)</div>
+          <div class="extra-desc">Alquiler exclusivo de viernes a domingo. Espacio para ceremonia, comedor abovedado, terraza jardín, finca completa para hasta 20 huéspedes alojados. Coordinación de eventos disponible.</div>
+          <div class="extra-price">Desde €4.500 <span style="font-size:1rem;color:rgba(255,255,255,0.4);">/ fin de semana 3 noches</span></div>
+        </div>
+        <div class="extra-card">
+          <div class="extra-name"> Paquete Boda (Julio/Agosto)</div>
+          <div class="extra-desc">Alquiler exclusivo de viernes a domingo. Espacio para ceremonia, comedor abovedado, terraza jardín, finca completa para hasta 20 huéspedes alojados. Coordinación de eventos disponible.</div>
+          <div class="extra-price">Desde €6.000 <span style="font-size:1rem;color:rgba(255,255,255,0.4);">/ fin de semana 3 noches</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="policies-grid" style="margin-top:4rem;">
+      <div class="policy-item">
+        <span class="policy-icon"></span>
+        <span class="policy-label">Estancia Mínima</span>
+        <span class="policy-value">3 noches Baja<br>3 noches Media<br>7 noches Temporada Alta</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-icon"></span>
+        <span class="policy-label">Capacidad</span>
+        <span class="policy-value">Hasta 20 huéspedes alojados entre todas las habitaciones y camas extras</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-icon"></span>
+        <span class="policy-label">Cancelación</span>
+        <span class="policy-value">Política de cancelación por confirmar — consulta para más detalles</span>
+      </div>
+      <div class="policy-item">
+        <span class="policy-icon"></span>
+        <span class="policy-label">Pago</span>
+        <span class="policy-value">30% de depósito · Resto 30 días antes de la llegada · Todas las divisas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section id="enquiry">
+  <div class="container">
+    <div>
+      <span class="section-eyebrow">Reserva la Finca</span>
+      <h2 class="enquiry-side-title">Haz una<br><em>Consulta</em></h2>
+      <p class="enquiry-side-body">Cuéntanos sobre tus planes de vacaciones o tu evento y te responderemos en 24 horas para confirmar disponibilidad y hablar sobre tu visión para Ses Garites.</p>
+      <div class="enquiry-contact">
+        <span class="enquiry-contact-label">Disponibilidad</span>
+        <span class="enquiry-contact-value"><a href="booking-calendar.html" target="_blank">Consultar Disponibilidad</a></span>
+      </div>
+      <div class="enquiry-contact">
+        <span class="enquiry-contact-label">Email</span>
+        <span class="enquiry-contact-value"><a href="mailto:montsetarrus71@gmail.com?subject=Consulta%20-%20Ses%20Garites&body=Hola%2C%0A%0AEstoy%20interesado%2Fa%20en%20reservar%20Ses%20Garites.%0A%0ANombre%3A%0AFechas%3A%0AN%C3%BAmero%20de%20huéspedes%3A%0ATipo%20de%20ocasión%3A%0A%0AGracias">Contáctanos</a></span>
+      </div>
+      <div class="enquiry-contact" style="margin-top:1.5rem;">
+        <span class="enquiry-contact-label">Ubicación</span>
+        <span class="enquiry-contact-value">Pals · Baix Empordà · Costa Brava</span>
+      </div>
+      <div class="ornament" style="text-align:left; margin-top:3rem;"> &nbsp; &nbsp; </div>
+      <p style="font-size:0.95rem;color:var(--ink-soft);line-height:1.8;">Bienvenidos huéspedes internacionales · Se aceptan todas las divisas · Alquiler exclusivo de la finca completa</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container" style="text-align:center;">
+    <span class="footer-logo">Ses Garites</span>
+    <p class="footer-loc">Pals · Baix Empordà · Costa Brava, Cataluña</p>
+    <p class="footer-copy">© 2025 Ses Garites · Todos los derechos reservados</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+</script>
+
+</body>
+</html>
