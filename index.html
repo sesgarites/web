@@ -284,10 +284,13 @@ nav.scrolled .nav-hamburger span { background: var(--ink); }
     background: linear-gradient(to bottom, rgba(255,255,255,0.9), transparent);
   }
   @media (max-width: 900px) {
-    /* Hero fix */
-/*   .hero-bg { background-position: 40% center; } */
 
-  #hero { height: 60vh; }
+    .hero-bg {
+      background: 
+        linear-gradient(160deg, rgba(42,33,24,0.6) 0%, rgba(42,33,24,0.35) 50%, rgba(42,33,24,0.75) 100%),
+        url('images/img_0_portrait.jpeg') center/cover no-repeat;
+    }
+  }
 
     
   .hero-stats { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
