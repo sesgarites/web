@@ -216,14 +216,19 @@ nav.scrolled .nav-hamburger span { background: var(--ink); }
     background:
       /*linear-gradient(160deg, rgba(42,33,24,0.45) 0%, rgba(42,33,24,0.15) 50%, rgba(42,33,24,0.65) 100%),
       url('images/img_0.jpeg') center/cover no-repeat; */
-      linear-gradient(160deg, rgba(42,33,24,0.6) 0%, rgba(42,33,24,0.35) 50%, rgba(42,33,24,0.75) 100%),
+      linear-gradient(160deg, rgba(42,33,24,0.9) 0%, rgba(42,33,24,0.75) 50%, rgba(42,33,24,0.85) 100%),
         url('images/img_0.jpeg') center/cover no-repeat;
     transform: scale(1.05);
     animation: heroZoom 18s ease-in-out infinite alternate;
   }
   
   @keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1.0); } }
-
+  /* Enhance Text */
+  .hero-title, .hero-sub, .hero-eyebrow {
+    text-shadow: 0 2px 20px rgba(42,33,24,0.6), 0 1px 4px rgba(0,0,0,0.4);
+  }
+  /* end Text Enhance */
+  
   .hero-content {
     position: relative; text-align: center; color: var(--white);
     padding: 0 2rem;
@@ -284,12 +289,7 @@ nav.scrolled .nav-hamburger span { background: var(--ink); }
     content: ''; width: 1px; height: 40px;
     background: linear-gradient(to bottom, rgba(255,255,255,0.9), transparent);
   }
-  /* Enhance Text */
 
-  .hero-title, .hero-sub, .hero-eyebrow {
-    text-shadow: 0 2px 20px rgba(42,33,24,0.6), 0 1px 4px rgba(0,0,0,0.4);
-  }
-  /* end Text Enhance */
   
   @keyframes pulse { 0%,100%{opacity:0.4} 50%{opacity:0.9} }
 
