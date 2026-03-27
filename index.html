@@ -140,7 +140,15 @@ nav.scrolled .nav-hamburger span { background: var(--ink); }
   .lang-toggle a { font-size: 0.55rem; padding: 0.3rem 0.6rem; }
 
   /* Hero fix */
-  .hero-bg { background-position: 70% center; }
+
+  .hero-bg {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  
+  /* .hero-bg { background-position: 70% center; } */
   .hero-stats { gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
   .hero-stat-num { font-size: 1.6rem; }
   .hero-stat-label { font-size: 0.5rem; }
