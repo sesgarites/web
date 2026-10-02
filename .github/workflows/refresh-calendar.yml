@@ -17,7 +17,7 @@ jobs:
       - name: Fetch iCal feed
         run: |
           curl -sSf \
-            "https://www.vrbo.com/icalendar/ec0c2ca022cc4733a7e10941269adcc6.ics" \
+            "https://calendar.avantio.pro/v1/62cf225e-dfd7-4a3d-9816-d5c8a5ffd4c4.ics" \
             -o calendar.ics
 
       - name: Commit updated calendar
